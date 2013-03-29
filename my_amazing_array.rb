@@ -3,12 +3,19 @@ class Array
   # elements are in order
   #
   def bubble_sort
-    # TODO: Replace this with your own bubble sort alorithm.
-    # HINT: The array that you are sorting is not to_sort anymore,
-    # its self.
-    #
-    # e.g. the first pair would be:
-    # pair = [self[0], self[1]]   
-    self
+    a = self
+    check = 0
+    
+    while check == 0
+      check = 1
+      for i in 0...a.length-1
+        if a[i] > a[i+1]
+          a[i], a[i+1] = a[i+1], a[i]
+          check = 0
+        end
+      end
+    end
+  
+  a # return final array
   end
 end
